@@ -47,7 +47,11 @@
 
   <!-- Header / Nav -->
   <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Brand (added back on the left) -->
+      <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">
+        Lucy Digital
+      </a>
       <nav class="hidden md:flex gap-6 text-slate-200 font-medium">
         <a href="work.html" class="hover:text-brand">Work</a>
         <a href="services.html" class="hover:text-brand">Services</a>
@@ -76,7 +80,8 @@
           <a href="services.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">View Services</a>
         </div>
       </div>
-      <figure class="aspect-square rounded-2xl overflow-hidden border border-slate-700">
+      <!-- Image slightly smaller on desktop -->
+      <figure class="w-full md:max-w-sm ml-auto aspect-square rounded-2xl overflow-hidden border border-slate-700">
         <img src="LucyDigital.png" alt="Lucy Digital" class="w-full h-full object-cover" loading="lazy" />
       </figure>
     </div>
@@ -204,15 +209,14 @@
           </summary>
           <div class="px-6 pb-6 pt-0">
             <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
-              <li> AI Workflow Automation & Prompt Engineering  — Grow with Google </li>
+              <li> AI Workflow Automation & Prompt Engineering — Grow with Google </li>
               <li> Technical SEO, E-commerce SEO, and SEO Manager — Blue Array UK </li>
               <li> Associates degree in marketing — University of California, Davis</li>
               <li> Conversion Rate Optimization and Design Thinking — Jellyfish ZA </li>
-              <li> GAU, GA4, GTM & Google Ads — Google Skillshop  </li>
-              <li> Advanced Training, Digital Strategy, and Business Opportunity Certification —  Grow with Google </li>
-              <li> AI Workflow Automation & Prompt Engineering — Grow with Google  </li>
+              <li> GAU, GA4, GTM & Google Ads — Google Skillshop </li>
+              <li> Advanced Training, Digital Strategy, and Business Opportunity Certification — Grow with Google </li>
               <li> Marketing Management, Office Administration & Business Law, and Customer Care – Centurion Academy </li>
-              <li> Bookkeeping to Trial Balance, Computerised Bookkeeping, & Financial Accounting  – ICB</li>
+              <li> Bookkeeping to Trial Balance, Computerised Bookkeeping, & Financial Accounting – ICB</li>
               <li> Business Management, & Business Literacy – ICB</li>
               <li> National Senior Certificate (Matric/highschool) — Welkom College</li>
             </ul>
@@ -228,9 +232,7 @@
             </div>
           </summary>
 
-          <!-- reduced spacing between dropdowns -->
           <div class="px-6 pb-6 pt-0 space-y-4">
-
             <!-- SEO, Analytics & Data Tools -->
             <details class="bg-slate-800/40 rounded-lg p-4">
               <summary class="summary-row cursor-pointer">
@@ -381,14 +383,10 @@
     function openAccordionById(id) {
       const target = document.querySelector(id);
       if (!target) return;
-      // Close others
       accordions.forEach(d => { if (d !== target) d.open = false; });
-      // Open target
       if (!target.open) target.open = true;
-      // Scroll into view (offset for sticky header)
       const y = target.getBoundingClientRect().top + window.scrollY - 88;
       window.scrollTo({ top: y, behavior: 'smooth' });
-      // Active link state
       subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
     }
     subLinks.forEach(a => {
