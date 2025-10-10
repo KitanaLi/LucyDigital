@@ -212,8 +212,8 @@
           </div>
         </details>
 
-        <!-- Tools & Platforms (accordion group) -->
-        <details id="tools" class="card rounded-2xl p-0 overflow-hidden" open>
+        <!-- Tools & Platforms (accordion group) - CLOSED by default -->
+        <details id="tools" class="card rounded-2xl p-0 overflow-hidden">
           <summary class="px-6 py-4">
             <div class="summary-row">
               <h2 class="text-2xl font-bold">Tools, Platforms & Technologies</h2>
@@ -387,7 +387,7 @@
     subLinks.forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        if (href && href.startsWith('#') && href !== '#tools') {
+        if (href && href.startsWith('#')) {
           e.preventDefault();
           openAccordionById(href);
         }
@@ -404,16 +404,6 @@
         }
       });
     });
-
-    // Keep Tools link highlighting when navigating directly to #tools
-    window.addEventListener('hashchange', () => {
-      const hash = window.location.hash || '';
-      subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
-    });
-    (function initHashActive(){
-      const hash = window.location.hash || '';
-      subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
-    })();
   </script>
 </body>
 </html>
