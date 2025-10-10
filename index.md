@@ -6,7 +6,7 @@
   <meta name="description" content="Portfolio of Lucy Digital: Marketing, AI, & Automation Consultant offering strategy, education, and innovation across SEO, CRO, and digital transformation." />
   <meta name="author" content="Lucy Digital" />
   <meta property="og:title" content="Lucy Digital | AI, Marketing & Automation Consultant" />
-  <meta property="og:description" content="Explore Lucy Digital’s portfolio — AI, marketing, automation, and performance strategy." />
+  <meta property="og:description" content="Explore Lucy Digital’s portfolio: Marketing, AI, automation, and performance strategy." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://<your-username>.github.io/" />
   <meta property="og:image" content="assets/og-image.jpg" />
