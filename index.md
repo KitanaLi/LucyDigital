@@ -2,8 +2,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lucy Digital | AI, Marketing & Automation Consultant</title>
-  <meta name="description" content="Portfolio of Lucy Digital: AI, Marketing & Automation Consultant offering strategy, education, and innovation across SEO, CRO, and digital transformation." />
+  <title>Lucy Digital | Marketing, AI & Automation Consultant</title>
+  <meta name="description" content="Portfolio of Lucy Digital: Marketing, AI, & Automation Consultant offering strategy, education, and innovation across SEO, CRO, and digital transformation." />
   <meta name="author" content="Lucy Digital" />
   <meta property="og:title" content="Lucy Digital | AI, Marketing & Automation Consultant" />
   <meta property="og:description" content="Explore Lucy Digital’s portfolio — AI, marketing, automation, and performance strategy." />
@@ -80,7 +80,7 @@
       <h1 class="text-4xl md:text-5xl font-extrabold text-white">Hi, I’m Lucy — <span class="text-brand">AI, Marketing & Automation Consultant</span></h1>
       <p class="mt-4 text-slate-200 text-lg">I help brands and professionals bridge human creativity with AI systems — through data-led marketing, automation, and strategy that scales. Explore my work, services, and approach to building performance ecosystems.</p>
       <div class="mt-6 flex flex-wrap gap-4">
-        <a href="#about" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">Read More About Me</a>
+        <a href="#about" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">More About Me</a>
         <a href="#services" class="px-5 py-3 rounded border border-slate-600 hover:bg-slate-800 text-slate-100">See My Services</a>
       </div>
     </div>
