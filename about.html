@@ -7,7 +7,7 @@
   <meta name="description" content="About Lucy Aingworth: Digital Marketing & CRO Lead, AI Automation Consultant, and Performance Strategist." />
   <link rel="icon" href="assets/favicon.ico" />
 
-  <!-- Open Graph (optional) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="About — Lucy Digital" />
   <meta property="og:description" content="Digital Marketing & CRO Lead, AI Automation Consultant, Performance Strategist." />
   <meta property="og:type" content="website" />
@@ -19,9 +19,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            brand: { DEFAULT:'#0EA5E9', dark:'#0369A1', soft:'#E0F2FE' }
-          },
+          colors: { brand: { DEFAULT:'#0EA5E9', dark:'#0369A1', soft:'#E0F2FE' } },
           boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.1)' }
         }
       }
@@ -32,6 +30,10 @@
     h1,h2,h3,h4,h5,h6{color:#F8FAFC}
     a{color:#E2E8F0} a:hover{color:#7DD3FC}
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+    .subnav a{border:1px solid #334155}
+    .subnav a.active{background:#0EA5E9;color:#0B1220;border-color:#0EA5E9}
+    .subnav a:hover{background:#0B1220}
+    @media (min-width: 768px){ .sticky-rail{ position: sticky; top: 96px; } }
   </style>
 </head>
 <body class="antialiased">
@@ -74,116 +76,128 @@
     </div>
   </section>
 
-  <!-- Core Expertise -->
+  <!-- Main content with sticky sub-nav -->
   <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">💼 Core Expertise</h2>
-      <div class="mt-3 grid md:grid-cols-2 gap-6 text-slate-300">
-        <ul class="list-disc list-inside space-y-1 text-sm">
-          <li><strong>SEO & Content Strategy:</strong> Technical SEO, keyword mapping, on-page and schema optimization.</li>
-          <li><strong>CRO & UX Optimization:</strong> Data-led testing, behavioral analytics, performance design.</li>
-          <li><strong>AI & Automation:</strong> Streamlining marketing workflows and building intelligent systems for scale.</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1 text-sm">
-          <li><strong>Performance Marketing:</strong> Integrated campaigns across SEO, paid media, and analytics.</li>
-          <li><strong>Leadership & Mentorship:</strong> Team guidance, project ownership, cross-functional collaboration.</li>
-          <li><strong>Analytics & Insights:</strong> Data interpretation, dashboards, actionable recommendations.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[240px,1fr] gap-8">
+      <!-- Sticky sub-nav (desktop) -->
+      <aside class="hidden md:block sticky-rail">
+        <nav class="subnav grid gap-3">
+          <a href="#core-expertise" class="px-4 py-2 rounded-lg text-sm">💼 Core Expertise</a>
+          <a href="#project-ops" class="px-4 py-2 rounded-lg text-sm">🎯 Project & Operations</a>
+          <a href="#teaching" class="px-4 py-2 rounded-lg text-sm">🧑‍🏫 Teaching & Soft Skills</a>
+          <a href="#industries" class="px-4 py-2 rounded-lg text-sm">🌍 Industries</a>
+          <a href="#certs" class="px-4 py-2 rounded-lg text-sm">🎓 Certifications</a>
+          <a href="#tools" class="px-4 py-2 rounded-lg text-sm">🧠 Tools & Platforms</a>
+        </nav>
+      </aside>
 
-  <!-- Project & Ops -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">🎯 Project & Operations Management</h2>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>End-to-end campaign management, from planning to performance reporting.</li>
-        <li>Project scoping, scheduling, and stakeholder coordination.</li>
-        <li>Workflows with Monday.com, Trello, Asana, ClickUp, and Airtable.</li>
-        <li>Strong communication and virtual team leadership.</li>
-        <li>Background in virtual assistance & admin support: calendar management, CRM upkeep, client comms, digital filing.</li>
-      </ul>
-    </div>
-  </section>
+      <!-- Section cards -->
+      <div class="grid gap-6">
 
-  <!-- Teaching & Soft Skills -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">🧑‍🏫 Teaching, Training & Soft Skills Development</h2>
-      <p class="mt-2 text-slate-300 text-sm">
-        I’m passionate about helping professionals and teams grow beyond technical skill — focusing on the soft skills that elevate careers and company cultures.
-      </p>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm grid md:grid-cols-2 gap-x-6">
-        <li>Leadership and Influence</li>
-        <li>Strategic Adaptability & Resilience</li>
-        <li>Persuasive & Emotional Communication</li>
-        <li>Self-Regulation & Professional Presence</li>
-        <li>Discernment, Decision-Making & Critical Thinking</li>
-      </ul>
-      <p class="mt-3 text-slate-300 text-sm">
-        I’m expanding this into structured training programs — online and in-person — to strengthen <strong>human-centered skills</strong> in an AI-driven workplace.
-      </p>
-    </div>
-  </section>
+        <!-- Core Expertise -->
+        <article id="core-expertise" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">💼 Core Expertise</h2>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>SEO & Content Strategy:</strong> Technical SEO, keyword mapping, on-page and schema optimization.</li>
+            <li><strong>CRO & UX Optimization:</strong> Data-led testing, behavioral analytics, performance design.</li>
+            <li><strong>AI & Automation:</strong> Streamlining marketing workflows and building intelligent systems for scale.</li>
+            <li><strong>Performance Marketing:</strong> Integrated campaigns across SEO, paid media, and analytics.</li>
+            <li><strong>Leadership & Mentorship:</strong> Team guidance, project ownership, cross-functional collaboration.</li>
+            <li><strong>Analytics & Insights:</strong> Data interpretation, dashboards, actionable recommendations.</li>
+          </ul>
+        </article>
 
-  <!-- Industries -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">🌍 Industries & Experience</h2>
-      <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-slate-300 text-sm">
-        <div>Luxury Travel & Tourism</div><div>SaaS & Tech Platforms</div><div>Finance & Professional Services</div>
-        <div>Education & Training</div><div>E-commerce & Retail</div><div>Agency & Consulting Environments</div>
-      </div>
-    </div>
-  </section>
+        <!-- Project & Operations -->
+        <article id="project-ops" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">🎯 Project & Operations Management</h2>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li>End-to-end campaign management, from planning to performance reporting.</li>
+            <li>Project scoping, scheduling, and stakeholder coordination.</li>
+            <li>Workflows with Monday.com, Trello, Asana, ClickUp, and Airtable.</li>
+            <li>Strong communication and virtual team leadership.</li>
+            <li>Background in virtual assistance & admin support: calendar management, CRM upkeep, client communications, digital filing.</li>
+          </ul>
+        </article>
 
-  <!-- Certifications -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">🎓 Certifications & Continuous Learning</h2>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li><strong>Technical SEO</strong>, <strong>E-commerce SEO</strong>, and <strong>SEO Manager</strong> — Blue Array UK</li>
-        <li><strong>Conversion Rate Optimization</strong> and <strong>Design Thinking</strong> — Jellyfish ZA</li>
-        <li><strong>GA4 & GTM Advanced Training</strong>, <strong>Digital Strategy</strong>, and <strong>Business Opportunity Certification</strong></li>
-        <li><strong>AI Workflow Automation & Prompt Engineering</strong> — Independent & hands-on projects</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Teaching & Soft Skills -->
+        <article id="teaching" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">🧑‍🏫 Teaching, Training & Soft Skills Development</h2>
+          <p class="mt-2 text-slate-300 text-sm">
+            I’m passionate about helping professionals and teams grow beyond technical skill — focusing on the soft skills that elevate careers and company cultures.
+          </p>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li>Leadership and Influence</li>
+            <li>Strategic Adaptability & Resilience</li>
+            <li>Persuasive & Emotional Communication</li>
+            <li>Self-Regulation & Professional Presence</li>
+            <li>Discernment, Decision-Making & Critical Thinking</li>
+          </ul>
+          <p class="mt-3 text-sm text-slate-300">
+            I’m expanding this into structured training programs — online and in-person — to strengthen <strong>human-centered skills</strong> in an AI-driven workplace.
+          </p>
+        </article>
 
-  <!-- Tools & Platforms (icon grid with asset placeholders) -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 card rounded-2xl p-6">
-      <h2 class="text-2xl font-bold">🧠 Tools, Platforms & Technologies</h2>
-      <p class="mt-2 text-slate-300 text-sm">Upload your icons to <code>assets/</code> and keep the filenames; titles will show on hover.</p>
+        <!-- Industries -->
+        <article id="industries" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">🌍 Industries & Experience</h2>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li>Luxury Travel & Tourism</li>
+            <li>SaaS & Tech Platforms</li>
+            <li>Finance & Professional Services</li>
+            <li>Education & Training</li>
+            <li>E-commerce & Retail</li>
+            <li>Agency & Consulting Environments</li>
+          </ul>
+        </article>
 
-      <!-- SEO & Analytics -->
-      <h3 class="mt-6 font-semibold">🧩 SEO & Analytics</h3>
-      <div class="mt-3 grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-4 items-center">
-        <img src="assets/icon-google-analytics.svg" width="48" alt="Google Analytics" title="Google Analytics" />
-        <img src="assets/icon-gtm.svg" width="48" alt="Google Tag Manager" title="Google Tag Manager" />
-        <img src="assets/icon-ahrefs.svg" width="48" alt="Ahrefs" title="Ahrefs" />
-        <img src="assets/icon-semrush.svg" width="48" alt="SEMrush" title="SEMrush" />
-        <img src="assets/icon-python.svg" width="48" alt="Python" title="Python (Data Analysis)" />
-      </div>
+        <!-- Certifications -->
+        <article id="certs" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">🎓 Certifications & Continuous Learning</h2>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>Technical SEO</strong>, <strong>E-commerce SEO</strong>, and <strong>SEO Manager</strong> — Blue Array UK</li>
+            <li><strong>Conversion Rate Optimization</strong> and <strong>Design Thinking</strong> — Jellyfish ZA</li>
+            <li><strong>GA4 & GTM Advanced Training</strong>, <strong>Digital Strategy</strong>, and <strong>Business Opportunity Certification</strong></li>
+            <li><strong>AI Workflow Automation & Prompt Engineering</strong> — Independent & hands-on projects</li>
+          </ul>
+        </article>
 
-      <!-- Content, CRO & AI -->
-      <h3 class="mt-6 font-semibold">💬 Content, CRO & AI</h3>
-      <div class="mt-3 grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-4 items-center">
-        <img src="assets/icon-wordpress.svg" width="48" alt="WordPress" title="WordPress" />
-        <img src="assets/icon-webflow.svg" width="48" alt="Webflow" title="Webflow" />
-        <img src="assets/icon-figma.svg" width="48" alt="Figma" title="Figma" />
-        <img src="assets/icon-photoshop.svg" width="48" alt="Adobe Photoshop" title="Adobe Photoshop" />
-        <img src="assets/icon-openai.svg" width="48" alt="AI Tools" title="ChatGPT, Gemini, Claude, Perplexity" />
-      </div>
+        <!-- Tools & Platforms (icons) -->
+        <article id="tools" class="card rounded-2xl p-6">
+          <h2 class="text-2xl font-bold">🧠 Tools, Platforms & Technologies</h2>
+          <p class="mt-2 text-slate-300 text-sm">Upload your icons to <code>assets/</code> and keep the filenames; titles will show on hover.</p>
 
-      <!-- CMS & Platforms -->
-      <h3 class="mt-6 font-semibold">⚙️ CMS & Platforms</h3>
-      <div class="mt-3 grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-4 items-center">
-        <img src="assets/icon-drupal.svg" width="48" alt="Drupal" title="Drupal" />
-        <img src="assets/icon-shopify.svg" width="48" alt="Shopify" title="Shopify" />
-        <img src="assets/icon-squarespace.svg" width="48" alt="Squarespace" title="Squarespace" />
-        <img src="assets/icon-umbraco.svg" width="48" alt="Umbraco" title="Umbraco" />
+          <h3 class="mt-6 font-semibold">🧩 SEO & Analytics</h3>
+          <div class="mt-3 flex flex-wrap gap-4 items-center">
+            <img src="assets/icon-google-analytics.svg" width="48" alt="Google Analytics" title="Google Analytics" />
+            <img src="assets/icon-gtm.svg" width="48" alt="Google Tag Manager" title="Google Tag Manager" />
+            <img src="assets/icon-ahrefs.svg" width="48" alt="Ahrefs" title="Ahrefs" />
+            <img src="assets/icon-semrush.svg" width="48" alt="SEMrush" title="SEMrush" />
+            <img src="assets/icon-python.svg" width="48" alt="Python" title="Python (Data Analysis)" />
+          </div>
+
+          <h3 class="mt-6 font-semibold">💬 Content, CRO & AI</h3>
+          <div class="mt-3 flex flex-wrap gap-4 items-center">
+            <img src="assets/icon-wordpress.svg" width="48" alt="WordPress" title="WordPress" />
+            <img src="assets/icon-webflow.svg" width="48" alt="Webflow" title="Webflow" />
+            <img src="assets/icon-figma.svg" width="48" alt="Figma" title="Figma" />
+            <img src="assets/icon-photoshop.svg" width="48" alt="Adobe Photoshop" title="Adobe Photoshop" />
+            <img src="assets/icon-openai.svg" width="48" alt="AI Tools" title="ChatGPT, Gemini, Claude, Perplexity" />
+          </div>
+
+          <h3 class="mt-6 font-semibold">⚙️ CMS & Platforms</h3>
+          <div class="mt-3 flex flex-wrap gap-4 items-center">
+            <img src="assets/icon-drupal.svg" width="48" alt="Drupal" title="Drupal" />
+            <img src="assets/icon-shopify.svg" width="48" alt="Shopify" title="Shopify" />
+            <img src="assets/icon-squarespace.svg" width="48" alt="Squarespace" title="Squarespace" />
+            <img src="assets/icon-umbraco.svg" width="48" alt="Umbraco" title="Umbraco" />
+          </div>
+        </article>
+
+        <!-- Back to top -->
+        <div class="text-right">
+          <a href="#top" class="text-slate-300 text-sm hover:text-brand">Back to top ↑</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -209,6 +223,22 @@
     © <span id="year"></span> Lucy Digital. All rights reserved.
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Highlight active subnav link on scroll (progressive enhancement)
+    const links = document.querySelectorAll('.subnav a');
+    const ids = [...links].map(a => a.getAttribute('href'));
+    const sections = ids.map(id => document.querySelector(id));
+    const onScroll = () => {
+      let active = 0;
+      sections.forEach((sec, i) => {
+        if (sec && sec.getBoundingClientRect().top - 120 <= 0) active = i;
+      });
+      links.forEach((a, i) => a.classList.toggle('active', i === active));
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
 </body>
 </html>
