@@ -43,7 +43,7 @@
     details[open] .chev{ transform: rotate(90deg); }
   </style>
 </head>
-<body class="antialiased">
+<body id="top" class="antialiased">
 
   <!-- Header / Nav -->
   <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
@@ -164,36 +164,35 @@
           </div>
         </details>
 
-<!-- Industries (accordion) -->
-<details id="industries" class="card rounded-2xl p-0 overflow-hidden">
-  <summary class="px-6 py-4">
-    <div class="summary-row">
-      <h2 class="text-2xl font-bold">Industries</h2>
-      <span class="chev">▸</span>
-    </div>
-  </summary>
-  <div class="px-6 pb-6 pt-0">
-    <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
-      <li>Digital Marketing & Advertising</li>
-      <li>Technology / SaaS</li>
-      <li>Finance & Insurance</li>
-      <li>Health, Beauty & Skincare</li>
-      <li>Travel, Tourism & Hospitality</li>
-      <li>Education & Training</li>
-      <li>Retail & E-commerce</li>
-      <li>Legal / Attorney</li>
-      <li>Industrial & Construction</li>
-      <li>Entertainment & Media</li>
-      <li>Real Estate & Property</li>
-      <li>Professional Services</li>
-      <li>Corporate Events / Marketing</li>
-      <li>Publishing / Print Media</li>
-      <li>Virtual Assistance & Administrative Support</li>
-      <li>AI, Automation & Strategy Consulting</li>
-    </ul>
-  </div>
-</details>
-        
+        <!-- Industries (accordion) -->
+        <details id="industries" class="card rounded-2xl p-0 overflow-hidden">
+          <summary class="px-6 py-4">
+            <div class="summary-row">
+              <h2 class="text-2xl font-bold">Industries</h2>
+              <span class="chev">▸</span>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 pt-0">
+            <ul class="mt-3 list-disc list-inside space-y-2 text-slate-300 text-sm">
+              <li>Digital Marketing & Advertising</li>
+              <li>Technology / SaaS</li>
+              <li>Finance & Insurance</li>
+              <li>Health, Beauty & Skincare</li>
+              <li>Travel, Tourism & Hospitality</li>
+              <li>Education & Training</li>
+              <li>Retail & E-commerce</li>
+              <li>Legal / Attorney</li>
+              <li>Industrial & Construction</li>
+              <li>Entertainment & Media</li>
+              <li>Real Estate & Property</li>
+              <li>Professional Services</li>
+              <li>Corporate Events / Marketing</li>
+              <li>Publishing / Print Media</li>
+              <li>Virtual Assistance & Administrative Support</li>
+              <li>AI, Automation & Strategy Consulting</li>
+            </ul>
+          </div>
+        </details>
 
         <!-- Certifications (accordion) -->
         <details id="certs" class="card rounded-2xl p-0 overflow-hidden">
@@ -214,118 +213,125 @@
         </details>
 
         <!-- Tools & Platforms (accordion group) -->
-<details id="tools" class="card rounded-2xl p-0 overflow-hidden" open>
-  <summary class="px-6 py-4">
-    <div class="summary-row">
-      <h2 class="text-2xl font-bold">Tools, Platforms & Technologies</h2>
-      <span class="chev">▸</span>
-    </div>
-  </summary>
-  <div class="px-6 pb-6 pt-0 space-y-6">
-    <!-- SEO, Analytics & Data Tools -->
-    <details class="bg-slate-800/40 rounded-lg p-4">
-      <summary class="summary-row cursor-pointer">
-        <h3 class="font-semibold text-lg">SEO, Analytics & Data Tools</h3>
-        <span class="chev">▸</span>
-      </summary>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>Google Analytics (Universal + GA4)</li>
-        <li>Google Tag Manager (GTM)</li>
-        <li>Google Search Console (GSC)</li>
-        <li>Bing Webmaster Tools</li>
-        <li>Google My Business / Google Business Profile</li>
-        <li>Google Data Studio / Looker Studio</li>
-        <li>Screaming Frog SEO Spider</li>
-        <li>Website Auditor, Rank Tracker</li>
-        <li>Ahrefs, SEMrush, AWR, Majestic, Link Research Tools</li>
-        <li>Keyword Tool.io, BrightLocal, BuzzSumo</li>
-        <li>Tableau, Power BI, Infogram</li>
-        <li>Dynomapper, Slickplan, WordStream</li>
-        <li>FileZilla (FTP management)</li>
-        <li>GSA, Magic Submitter (legacy automation tools)</li>
-      </ul>
-    </details>
-    <!-- Content, CRO & Creative Tools -->
-    <details class="bg-slate-800/40 rounded-lg p-4">
-      <summary class="summary-row cursor-pointer">
-        <h3 class="font-semibold text-lg">Content, CRO & Creative Tools</h3>
-        <span class="chev">▸</span>
-      </summary>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>Figma (UX/UI design)</li>
-        <li>Adobe Photoshop, Illustrator, Acrobat</li>
-        <li>Hotjar (user behavior analytics)</li>
-        <li>Unbounce, VWO, Optimizely (A/B testing)</li>
-        <li>Axure, Balsamiq, Mockflow (wireframing)</li>
-        <li>QuarkXPress</li>
-        <li>Sublime Text, Brackets, Dreamweaver</li>
-        <li>Canva</li>
-        <li>ChatGPT / Gemini / Claude / Perplexity (AI & workflow design)</li>
-        <li>Terminus (content & ABM platform)</li>
-        <li>Slickplan (site flow mapping)</li>
-        <li>UX research, journey mapping, and A/B test execution</li>
-      </ul>
-    </details>
-    <!-- CMS & Website Platforms -->
-    <details class="bg-slate-800/40 rounded-lg p-4">
-      <summary class="summary-row cursor-pointer">
-        <h3 class="font-semibold text-lg">CMS & Website Platforms</h3>
-        <span class="chev">▸</span>
-      </summary>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>WordPress, WooCommerce</li>
-        <li>Webflow</li>
-        <li>Shopify</li>
-        <li>Squarespace</li>
-        <li>SilverStripe</li>
-        <li>Joomla</li>
-        <li>Drupal</li>
-        <li>BigCommerce</li>
-        <li>Lightspeed</li>
-        <li>Showit</li>
-        <li>Wix</li>
-        <li>EMEA OneWeb CMS</li>
-        <li>Umbraco</li>
-        <li>Contentful</li>
-      </ul>
-    </details>
-    <!-- Digital Marketing & Social Media Platforms -->
-    <details class="bg-slate-800/40 rounded-lg p-4">
-      <summary class="summary-row cursor-pointer">
-        <h3 class="font-semibold text-lg">Digital Marketing & Social Media Platforms</h3>
-        <span class="chev">▸</span>
-      </summary>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>Meta Ads (Facebook, Instagram, Messenger)</li>
-        <li>X (Twitter Ads)</li>
-        <li>Pinterest Ads Manager</li>
-        <li>TikTok Ads Manager</li>
-        <li>Google Ads</li>
-        <li>Bing Ads</li>
-        <li>YouTube Ads</li>
-        <li>WhatsApp Business</li>
-      </ul>
-    </details>
-    <!-- Business, CRM & Admin Tools -->
-    <details class="bg-slate-800/40 rounded-lg p-4">
-      <summary class="summary-row cursor-pointer">
-        <h3 class="font-semibold text-lg">Business, CRM & Admin Tools</h3>
-        <span class="chev">▸</span>
-      </summary>
-      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
-        <li>Microsoft Office Suite (Word, Excel, PowerPoint, Publisher, Outlook)</li>
-        <li>Monday.com, Trello, ClickUp, Asana, Airtable (Project Management)</li>
-        <li>Pastel Accounting & Evolution</li>
-        <li>QuickBooks, Sage Accounting</li>
-        <li>Maximizer CRM, Soffront CRM</li>
-        <li>Google Workspace (Docs, Sheets, Drive, Slides, Vids, Forms, Tasks, Sites)</li>
-        <li>Slack, Zoom, Skype, Teams, Google Chat, Google Meet</li>
-        <li>Simplify HR Platform</li>
-        <li>UI Path (Automation Software)</li>
-      </ul>
-    </details>
-  </div>
-</details>
+        <details id="tools" class="card rounded-2xl p-0 overflow-hidden" open>
+          <summary class="px-6 py-4">
+            <div class="summary-row">
+              <h2 class="text-2xl font-bold">Tools, Platforms & Technologies</h2>
+              <span class="chev">▸</span>
+            </div>
+          </summary>
+
+          <!-- reduced spacing between dropdowns -->
+          <div class="px-6 pb-6 pt-0 space-y-4">
+
+            <!-- SEO, Analytics & Data Tools -->
+            <details class="bg-slate-800/40 rounded-lg p-4">
+              <summary class="summary-row cursor-pointer">
+                <h3 class="font-semibold text-lg">SEO, Analytics & Data Tools</h3>
+                <span class="chev">▸</span>
+              </summary>
+              <ul class="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                <li>Google Analytics (Universal + GA4)</li>
+                <li>Google Tag Manager (GTM)</li>
+                <li>Google Search Console (GSC)</li>
+                <li>Bing Webmaster Tools</li>
+                <li>Google My Business / Google Business Profile</li>
+                <li>Google Data Studio / Looker Studio</li>
+                <li>Screaming Frog SEO Spider</li>
+                <li>Website Auditor, Rank Tracker</li>
+                <li>Ahrefs, SEMrush, AWR, Majestic, Link Research Tools</li>
+                <li>Keyword Tool.io, BrightLocal, BuzzSumo</li>
+                <li>Tableau, Power BI, Infogram</li>
+                <li>Dynomapper, Slickplan, WordStream</li>
+                <li>FileZilla (FTP management)</li>
+                <li>GSA, Magic Submitter (legacy automation tools)</li>
+              </ul>
+            </details>
+
+            <!-- Content, CRO & Creative Tools -->
+            <details class="bg-slate-800/40 rounded-lg p-4">
+              <summary class="summary-row cursor-pointer">
+                <h3 class="font-semibold text-lg">Content, CRO & Creative Tools</h3>
+                <span class="chev">▸</span>
+              </summary>
+              <ul class="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                <li>Figma (UX/UI design)</li>
+                <li>Adobe Photoshop, Illustrator, Acrobat</li>
+                <li>Hotjar (user behavior analytics)</li>
+                <li>Unbounce, VWO, Optimizely (A/B testing)</li>
+                <li>Axure, Balsamiq, Mockflow (wireframing)</li>
+                <li>QuarkXPress</li>
+                <li>Sublime Text, Brackets, Dreamweaver</li>
+                <li>Canva</li>
+                <li>ChatGPT / Gemini / Claude / Perplexity (AI & workflow design)</li>
+                <li>Terminus (content & ABM platform)</li>
+                <li>Slickplan (site flow mapping)</li>
+                <li>UX research, journey mapping, and A/B test execution</li>
+              </ul>
+            </details>
+
+            <!-- CMS & Website Platforms -->
+            <details class="bg-slate-800/40 rounded-lg p-4">
+              <summary class="summary-row cursor-pointer">
+                <h3 class="font-semibold text-lg">CMS & Website Platforms</h3>
+                <span class="chev">▸</span>
+              </summary>
+              <ul class="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                <li>WordPress, WooCommerce</li>
+                <li>Webflow</li>
+                <li>Shopify</li>
+                <li>Squarespace</li>
+                <li>SilverStripe</li>
+                <li>Joomla</li>
+                <li>Drupal</li>
+                <li>BigCommerce</li>
+                <li>Lightspeed</li>
+                <li>Showit</li>
+                <li>Wix</li>
+                <li>EMEA OneWeb CMS</li>
+                <li>Umbraco</li>
+                <li>Contentful</li>
+              </ul>
+            </details>
+
+            <!-- Digital Marketing & Social Media Platforms -->
+            <details class="bg-slate-800/40 rounded-lg p-4">
+              <summary class="summary-row cursor-pointer">
+                <h3 class="font-semibold text-lg">Digital Marketing & Social Media Platforms</h3>
+                <span class="chev">▸</span>
+              </summary>
+              <ul class="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                <li>Meta Ads (Facebook, Instagram, Messenger)</li>
+                <li>X (Twitter Ads)</li>
+                <li>Pinterest Ads Manager</li>
+                <li>TikTok Ads Manager</li>
+                <li>Google Ads</li>
+                <li>Bing Ads</li>
+                <li>YouTube Ads</li>
+                <li>WhatsApp Business</li>
+              </ul>
+            </details>
+
+            <!-- Business, CRM & Admin Tools -->
+            <details class="bg-slate-800/40 rounded-lg p-4">
+              <summary class="summary-row cursor-pointer">
+                <h3 class="font-semibold text-lg">Business, CRM & Admin Tools</h3>
+                <span class="chev">▸</span>
+              </summary>
+              <ul class="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                <li>Microsoft Office Suite (Word, Excel, PowerPoint, Publisher, Outlook)</li>
+                <li>Monday.com, Trello, ClickUp, Asana, Airtable (Project Management)</li>
+                <li>Pastel Accounting & Evolution</li>
+                <li>QuickBooks, Sage Accounting</li>
+                <li>Maximizer CRM, Soffront CRM</li>
+                <li>Google Workspace (Docs, Sheets, Drive, Slides, Vids, Forms, Tasks, Sites)</li>
+                <li>Slack, Zoom, Skype, Teams, Google Chat, Google Meet</li>
+                <li>Simplify HR Platform</li>
+                <li>UI Path (Automation Software)</li>
+              </ul>
+            </details>
+          </div>
+        </details>
 
         <!-- Back to top (bigger and clearer) -->
         <div class="text-right">
@@ -338,14 +344,18 @@
     </div>
   </section>
 
-  <!-- Contact (simple, no frame) -->
+  <!-- Contact (centered, buttons to the right on desktop) -->
   <section class="py-12">
-    <div class="max-w-6xl mx-auto px-4 text-center md:text-left">
-      <h3 class="text-2xl font-semibold">Get in touch</h3>
-      <p class="text-slate-300 mt-1 text-sm">Based in South Africa — working globally.</p>
-      <div class="mt-4 flex gap-3 justify-center md:justify-start">
-        <a href="mailto:lisindalucy@gmail.com" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">Email</a>
-        <a href="https://www.linkedin.com/in/lucy-digital/" class="px-5 py-3 rounded border border-slate-600 hover:bg-slate-800" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+        <div>
+          <h3 class="text-2xl font-semibold">Get in touch</h3>
+          <p class="text-slate-300 mt-1 text-sm">Based in South Africa — working globally.</p>
+        </div>
+        <div class="flex gap-3 md:ml-4">
+          <a href="mailto:lisindalucy@gmail.com" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">Email</a>
+          <a href="https://www.linkedin.com/in/lucy-digital/" class="px-5 py-3 rounded border border-slate-600 hover:bg-slate-800" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </div>
   </section>
@@ -394,6 +404,16 @@
         }
       });
     });
+
+    // Keep Tools link highlighting when navigating directly to #tools
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash || '';
+      subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
+    });
+    (function initHashActive(){
+      const hash = window.location.hash || '';
+      subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
+    })();
   </script>
 </body>
 </html>
