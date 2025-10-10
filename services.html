@@ -3,88 +3,268 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services — Lucy Digital</title>
-  <meta name="description" content="AI, Automation, SEO, CRO, Paid Social, and Education services." />
+  <meta name="description" content="AI, Automation, SEO, CRO, Paid Social, and Education services from Lucy Digital." />
   <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0EA5E9',dark:'#0369A1',soft:'#E0F2FE'}},boxShadow:{soft:'0 10px 30px rgba(0,0,0,0.1)'}}}}</script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT:'#0EA5E9', dark:'#0369A1', soft:'#E0F2FE' } },
+          boxShadow: { soft:'0 10px 30px rgba(0,0,0,0.1)' }
+        }
+      }
+    }
+  </script>
+
   <style>
     body{background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);color:#E2E8F0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif}
-    h1,h2,h3{color:#F8FAFC} a{color:#E2E8F0} a:hover{color:#7DD3FC}
+    h1,h2,h3{color:#F8FAFC}
+    a{color:#E2E8F0} a:hover{color:#7DD3FC}
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+    details summary{list-style:none;cursor:pointer}
+    details summary::-webkit-details-marker{display:none}
+    .summary-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .chev{transition:transform .2s ease;color:#94A3B8}
+    details[open] .chev{transform:rotate(90deg)}
   </style>
 </head>
 <body class="antialiased">
+
+  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end">
-      <nav class="hidden md:flex gap-6 text-slate-200 font-medium">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Left: Brand -->
+      <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">
+        Lucy Digital
+      </a>
+      <!-- Right: Nav -->
+      <nav class="hidden md:flex gap-6 text-slate-200 font-medium items-center">
         <a href="work.html" class="hover:text-brand">Work</a>
         <a href="services.html" class="hover:text-brand underline underline-offset-4">Services</a>
         <a href="about.html" class="hover:text-brand">About</a>
         <a href="contact.html" class="hover:text-brand">Contact</a>
-        <a href="resume.html" class="px-4 py-2 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">Resume</a>
+        <a href="resume.html" class="px-4 py-2 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark transition">Resume</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold">Services</h1>
-      <p class="mt-3 text-slate-300 max-w-3xl">I combine AI, marketing, and CRO to build systems that compound. Choose a track or mix and match.</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold">Build smarter, scalable systems that blend AI, Marketing & CRO.</h1>
+      <p class="mt-4 text-slate-300 max-w-3xl">
+        I help brands and teams design connected systems that grow revenue, improve performance, and future-proof operations
+        through strategy, experimentation, and automation.
+      </p>
     </div>
   </section>
 
+  <!-- Services Grid -->
   <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div id="strategy" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">Strategy & Growth Architecture</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>Positioning, ICPs, offer clarity</li><li>Funnel mapping, measurement plans</li><li>Quarterly roadmaps & test backlogs</li>
-        </ul>
-      </div>
-      <div id="ai-automation" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">AI & Automation</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>Prompt ops & assistants (research/content)</li><li>Editorial & analytics automation</li><li>QA frameworks, governance & playbooks</li>
-        </ul>
-      </div>
-      <div id="seo" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">SEO (Entity-Led)</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>IA & hub taxonomies</li><li>Structured data & entity mapping</li><li>Briefs & editorial playbooks</li>
-        </ul>
-      </div>
-      <div id="cro" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">CRO & Experimentation</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>Research → hypotheses → A/B tests</li><li>Landing page systems & forms</li><li>Learnings repo & iteration</li>
-        </ul>
-      </div>
-      <div id="paid-social" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">Paid Social (LinkedIn / Meta)</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>ABM logic, native forms, sequencing</li><li>Creative frameworks & testing plans</li>
-        </ul>
-      </div>
-      <div id="education" class="card rounded-2xl p-6">
-        <h2 class="text-xl font-semibold">Education & Workshops</h2>
-        <ul class="mt-3 list-disc list-inside text-slate-300 text-sm">
-          <li>AI for marketers (intro → advanced)</li><li>CRO bootcamps, SEO entity workshops</li><li>Leadership & enablement</li>
-        </ul>
-      </div>
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+
+      <!-- Strategy & Growth Architecture -->
+      <article id="strategy" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">Strategy & Growth Architecture</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Turn complex marketing and growth goals into actionable systems.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>ICPs, market positioning & value clarity</li>
+            <li>Funnel architecture & multi-channel measurement design</li>
+            <li>Campaign frameworks aligning paid, organic & conversion objectives</li>
+            <li>Quarterly strategy sprints & optimization backlogs</li>
+            <li>OKR alignment & growth playbooks</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Deliverables</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Strategy decks & templates</li>
+            <li>Measurement frameworks</li>
+            <li>Roadmaps & quarterly test calendars</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- AI & Automation -->
+      <article id="ai-automation" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">AI & Automation</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Bring efficiency, consistency, and scale to content, analytics, and internal workflows.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Prompt Ops systems & custom GPT assistants</li>
+            <li>Editorial & analytics workflow automation</li>
+            <li>Structured AI knowledge bases for marketing & CRO teams</li>
+            <li>Governance systems, QA frameworks & automation playbooks</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Deliverables</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>SOP libraries</li>
+            <li>Prompt systems & templates</li>
+            <li>Automation dashboards & setup documentation</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- SEO (Entity-Led) -->
+      <article id="seo" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">SEO (Entity-Led)</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Build authority & visibility through structured data, taxonomy, and content depth.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Information Architecture (IA) & hub taxonomy design</li>
+            <li>Entity-based SEO (schema, structured data, Wikidata, topical mapping)</li>
+            <li>Keyword-to-intent frameworks</li>
+            <li>Editorial briefs, content outlines & playbooks</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Deliverables</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Entity maps & IA documentation</li>
+            <li>Content strategy templates</li>
+            <li>SEO dashboards & taxonomy models</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- CRO & Experimentation -->
+      <article id="cro" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">CRO & Experimentation</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Turn user insights into measurable conversion uplift.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Research → hypothesis → experimentation pipeline</li>
+            <li>Landing page systems, heatmap analysis & form testing</li>
+            <li>UX heuristics & behavioral testing</li>
+            <li>Learnings repositories & continuous iteration frameworks</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Deliverables</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>A/B testing frameworks & dashboards</li>
+            <li>CRO documentation</li>
+            <li>Test backlog systems</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- Paid Social -->
+      <article id="paid-social" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">Paid Social (LinkedIn / Meta)</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Align performance campaigns with strategic storytelling & experimentation.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>ABM logic, sequencing & audience layering</li>
+            <li>Creative & messaging frameworks (problem/solution-based)</li>
+            <li>Testing & variation structures</li>
+            <li>Native form optimization & CRM flow alignment</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Deliverables</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Campaign templates</li>
+            <li>Ad testing plans & creative frameworks</li>
+            <li>Reporting & insight loops</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- Education & Workshops -->
+      <article id="education" class="card rounded-2xl p-6">
+        <h2 class="text-2xl font-semibold">Education & Workshops</h2>
+        <p class="mt-2 text-slate-300 text-sm">
+          <strong>Purpose:</strong> Build in-house capability & confidence through custom sessions and enablement.
+        </p>
+        <details class="mt-4 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">What’s included</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>AI for marketers (intro → advanced)</li>
+            <li>CRO and SEO bootcamps</li>
+            <li>Leadership, communication & enablement workshops</li>
+            <li>Bespoke programs for marketing, operations, or leadership teams</li>
+          </ul>
+        </details>
+        <details class="mt-3 bg-slate-800/40 rounded-lg p-4">
+          <summary class="summary-row">
+            <h3 class="font-semibold">Formats</h3><span class="chev">▸</span>
+          </summary>
+          <ul class="mt-3 list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Live workshops</li>
+            <li>On-demand modules</li>
+            <li>Fractional coaching programs</li>
+          </ul>
+        </details>
+      </article>
+
     </div>
   </section>
 
+  <!-- How to work with me -->
   <section class="py-12">
     <div class="max-w-6xl mx-auto px-4">
       <div class="card rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div><h3 class="text-xl font-semibold">How to work with me</h3>
-          <p class="text-slate-300 mt-1 text-sm">Fractional (1–2 days/week), Project (4–8 weeks), Workshops (custom).</p></div>
+        <div>
+          <h3 class="text-xl font-semibold">How to work with me</h3>
+          <p class="text-slate-300 mt-1 text-sm">
+            <strong>Fractional Consulting (1–2 days/week)</strong> for ongoing leadership ·
+            <strong>Projects (4–8 weeks)</strong> for focused outcomes ·
+            <strong>Workshops (custom)</strong> designed around your team’s needs.
+          </p>
+        </div>
         <a href="contact.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">Get in touch</a>
       </div>
     </div>
   </section>
 
-  <footer class="py-6 border-t border-slate-700 text-center text-slate-400 text-sm">© <span id="year"></span> Lucy Digital. All rights reserved.</footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer class="py-6 border-t border-slate-700 text-center text-slate-400 text-sm">
+    © <span id="year"></span> Lucy Digital. All rights reserved.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
