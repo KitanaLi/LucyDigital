@@ -77,8 +77,8 @@
 <section id="home" class="py-20">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
     <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white">Hi, I’m Lucy — <span class="text-brand">AI, Marketing & Automation Consultant</span></h1>
-      <p class="mt-4 text-slate-200 text-lg">I help brands and professionals bridge human creativity with AI systems — through data-led marketing, automation, and strategy that scales. Explore my work, services, and approach to building performance ecosystems.</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white">Hi, I’m Lucy — <span class="text-brand">Marketing, AI & Automation Consultant and Performance Strategist</span></h1>
+      <p class="mt-4 text-slate-200 text-lg">I help brands and professionals bridge human creativity with AI systems - through data-led marketing, automation, and strategy that scales. Explore my work, services, and approach to building performance ecosystems.</p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a href="#about" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">More About Me</a>
         <a href="#services" class="px-5 py-3 rounded border border-slate-600 hover:bg-slate-800 text-slate-100">See My Services</a>
