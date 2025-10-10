@@ -213,37 +213,126 @@
           </div>
         </details>
 
-        <!-- Tools & Platforms (NOT collapsible, NOT framed) -->
-        <section id="tools" class="rounded-2xl p-0">
-          <h2 class="text-2xl font-bold">Tools, Platforms & Technologies</h2>
-          <p class="mt-2 text-slate-300 text-sm">Upload your icons to <code>assets/</code> and keep the filenames; titles will show on hover.</p>
+        <<!-- Tools & Platforms (accordion group) -->
+<details id="tools" class="card rounded-2xl p-0 overflow-hidden" open>
+  <summary class="px-6 py-4">
+    <div class="summary-row">
+      <h2 class="text-2xl font-bold">Tools, Platforms & Technologies</h2>
+      <span class="chev">▸</span>
+    </div>
+  </summary>
 
-          <h3 class="mt-6 font-semibold">SEO & Analytics</h3>
-          <div class="mt-3 flex flex-wrap gap-4 items-center">
-            <img src="assets/icon-google-analytics.svg" width="48" alt="Google Analytics" title="Google Analytics" />
-            <img src="assets/icon-gtm.svg" width="48" alt="Google Tag Manager" title="Google Tag Manager" />
-            <img src="assets/icon-ahrefs.svg" width="48" alt="Ahrefs" title="Ahrefs" />
-            <img src="assets/icon-semrush.svg" width="48" alt="SEMrush" title="SEMrush" />
-            <img src="assets/icon-python.svg" width="48" alt="Python" title="Python (Data Analysis)" />
-          </div>
+  <div class="px-6 pb-6 pt-0 space-y-6">
 
-          <h3 class="mt-6 font-semibold">Content, CRO & AI</h3>
-          <div class="mt-3 flex flex-wrap gap-4 items-center">
-            <img src="assets/icon-wordpress.svg" width="48" alt="WordPress" title="WordPress" />
-            <img src="assets/icon-webflow.svg" width="48" alt="Webflow" title="Webflow" />
-            <img src="assets/icon-figma.svg" width="48" alt="Figma" title="Figma" />
-            <img src="assets/icon-photoshop.svg" width="48" alt="Adobe Photoshop" title="Adobe Photoshop" />
-            <img src="assets/icon-openai.svg" width="48" alt="AI Tools" title="ChatGPT, Gemini, Claude, Perplexity" />
-          </div>
+    <!-- SEO, Analytics & Data Tools -->
+    <details class="bg-slate-800/40 rounded-lg p-4">
+      <summary class="summary-row cursor-pointer">
+        <h3 class="font-semibold text-lg">SEO, Analytics & Data Tools</h3>
+        <span class="chev">▸</span>
+      </summary>
+      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
+        <li>Google Analytics (Universal + GA4)</li>
+        <li>Google Tag Manager (GTM)</li>
+        <li>Google Search Console (GSC)</li>
+        <li>Bing Webmaster Tools</li>
+        <li>Google My Business / Google Business Profile</li>
+        <li>Google Data Studio / Looker Studio</li>
+        <li>Screaming Frog SEO Spider</li>
+        <li>Website Auditor, Rank Tracker</li>
+        <li>Ahrefs, SEMrush, AWR, Majestic, Link Research Tools</li>
+        <li>Keyword Tool.io, BrightLocal, BuzzSumo</li>
+        <li>Tableau, Power BI, Infogram</li>
+        <li>Dynomapper, Slickplan, WordStream</li>
+        <li>FileZilla (FTP management)</li>
+        <li>GSA, Magic Submitter (legacy automation tools)</li>
+      </ul>
+    </details>
 
-          <h3 class="mt-6 font-semibold">CMS & Platforms</h3>
-          <div class="mt-3 flex flex-wrap gap-4 items-center">
-            <img src="assets/icon-drupal.svg" width="48" alt="Drupal" title="Drupal" />
-            <img src="assets/icon-shopify.svg" width="48" alt="Shopify" title="Shopify" />
-            <img src="assets/icon-squarespace.svg" width="48" alt="Squarespace" title="Squarespace" />
-            <img src="assets/icon-umbraco.svg" width="48" alt="Umbraco" title="Umbraco" />
-          </div>
-        </section>
+    <!-- Content, CRO & Creative Tools -->
+    <details class="bg-slate-800/40 rounded-lg p-4">
+      <summary class="summary-row cursor-pointer">
+        <h3 class="font-semibold text-lg">Content, CRO & Creative Tools</h3>
+        <span class="chev">▸</span>
+      </summary>
+      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
+        <li>Figma (UX/UI design)</li>
+        <li>Adobe Photoshop, Illustrator, Acrobat</li>
+        <li>Hotjar (user behavior analytics)</li>
+        <li>Unbounce, VWO, Optimizely (A/B testing)</li>
+        <li>Axure, Balsamiq, Mockflow (wireframing)</li>
+        <li>QuarkXPress</li>
+        <li>Sublime Text, Brackets, Dreamweaver</li>
+        <li>Canva</li>
+        <li>ChatGPT / Gemini / Claude / Perplexity (AI & workflow design)</li>
+        <li>Terminus (content & ABM platform)</li>
+        <li>Slickplan (site flow mapping)</li>
+        <li>UX research, journey mapping, and A/B test execution</li>
+      </ul>
+    </details>
+
+    <!-- CMS & Website Platforms -->
+    <details class="bg-slate-800/40 rounded-lg p-4">
+      <summary class="summary-row cursor-pointer">
+        <h3 class="font-semibold text-lg">CMS & Website Platforms</h3>
+        <span class="chev">▸</span>
+      </summary>
+      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
+        <li>WordPress, WooCommerce</li>
+        <li>Webflow</li>
+        <li>Shopify</li>
+        <li>Squarespace</li>
+        <li>SilverStripe</li>
+        <li>Joomla</li>
+        <li>Drupal</li>
+        <li>BigCommerce</li>
+        <li>Lightspeed</li>
+        <li>Showit</li>
+        <li>Wix</li>
+        <li>EMEA OneWeb CMS</li>
+        <li>Umbraco</li>
+        <li>Contentful</li>
+      </ul>
+    </details>
+
+    <!-- Digital Marketing & Social Media Platforms -->
+    <details class="bg-slate-800/40 rounded-lg p-4">
+      <summary class="summary-row cursor-pointer">
+        <h3 class="font-semibold text-lg">Digital Marketing & Social Media Platforms</h3>
+        <span class="chev">▸</span>
+      </summary>
+      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
+        <li>Meta Ads (Facebook, Instagram, Messenger)</li>
+        <li>X (Twitter Ads)</li>
+        <li>Pinterest Ads Manager</li>
+        <li>TikTok Ads Manager</li>
+        <li>Google Ads</li>
+        <li>Bing Ads</li>
+        <li>YouTube Ads</li>
+        <li>WhatsApp Business</li>
+      </ul>
+    </details>
+
+    <!-- Business, CRM & Admin Tools -->
+    <details class="bg-slate-800/40 rounded-lg p-4">
+      <summary class="summary-row cursor-pointer">
+        <h3 class="font-semibold text-lg">Business, CRM & Admin Tools</h3>
+        <span class="chev">▸</span>
+      </summary>
+      <ul class="mt-3 list-disc list-inside text-slate-300 text-sm space-y-1">
+        <li>Microsoft Office Suite (Word, Excel, PowerPoint, Publisher, Outlook)</li>
+        <li>Monday.com, Trello, ClickUp, Asana, Airtable (Project Management)</li>
+        <li>Pastel Accounting & Evolution</li>
+        <li>QuickBooks, Sage Accounting</li>
+        <li>Maximizer CRM, Soffront CRM</li>
+        <li>Google Workspace (Docs, Sheets, Drive, Slides, Vids, Forms, Tasks, Sites)</li>
+        <li>Slack, Zoom, Skype, Teams, Google Chat, Google Meet</li>
+        <li>Simplify HR Platform</li>
+        <li>UI Path (Automation Software)</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
 
         <!-- Back to top (bigger and clearer) -->
         <div class="text-right">
