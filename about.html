@@ -25,13 +25,19 @@
       }
     }
   </script>
+  
+  
   <style>
-    body{
-      background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
-      color:#E2E8F0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif
+    html, body { height: 100%; }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
+      color: #E2E8F0;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif;
     }
-    h1,h2,h3,h4,h5,h6{color:#F8FAFC}
+    main { flex: 1; }
+    h1,h2{color:#F8FAFC}
     a{color:#E2E8F0} a:hover{color:#7DD3FC}
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .subnav a{border:1px solid #334155}
@@ -55,7 +61,10 @@
   <!-- Header / Nav -->
   <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">Lucy Digital</a>
+      <!-- Left: Brand Name -->
+      <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">
+        Lucy Digital
+      </a>
       <nav class="hidden md:flex gap-6 text-slate-200 font-medium">
         <a href="work.html" class="hover:text-brand">Work</a>
         <a href="services.html" class="hover:text-brand">Services</a>
