@@ -21,46 +21,26 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              DEFAULT: '#0EA5E9',
-              dark: '#0369A1',
-              soft: '#E0F2FE'
-            },
-            textdark: '#0F172A',
-            textmid: '#1E293B',
-            textlight: '#334155'
+            brand: { DEFAULT:'#0EA5E9', dark:'#0369A1', soft:'#E0F2FE' },
+            textdark:'#0F172A', textmid:'#1E293B', textlight:'#334155'
           },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.1)'
-          }
+          boxShadow: { soft:'0 10px 30px rgba(0,0,0,0.1)' }
         }
       }
     }
   </script>
 
   <style>
-    body {
-      background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
-      color: #E2E8F0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    body{
+      background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
+      color:#E2E8F0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif
     }
-    h1, h2, h3, h4, h5, h6 {
-      color: #F8FAFC;
-    }
-    p, li, span, a {
-      color: #E2E8F0;
-    }
-    a:hover {
-      color: #7DD3FC;
-    }
-    .card {
-      background-color: #1E293B;
-      border: 1px solid #334155;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    header, footer {
-      background-color: transparent;
-    }
+    h1,h2,h3,h4,h5,h6{color:#F8FAFC}
+    p,li,span,a{color:#E2E8F0}
+    a:hover{color:#7DD3FC}
+    .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+    header,footer{background-color:transparent}
   </style>
 </head>
 <body class="antialiased">
@@ -68,12 +48,9 @@
 <!-- Header -->
 <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <!-- Left: Brand Name -->
     <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">
       Lucy Digital
     </a>
-
-    <!-- Right: Navigation -->
     <nav class="hidden md:flex gap-6 text-slate-200 font-medium items-center">
       <a href="work.html" class="hover:text-brand">Work</a>
       <a href="services.html" class="hover:text-brand">Services</a>
@@ -89,35 +66,45 @@
 <!-- Hero Section -->
 <section id="home" class="py-20">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <!-- Left: copy -->
     <div>
       <h1 class="text-4xl md:text-4xl font-extrabold text-white">
-        Hi, I’m Lucy  
+        Hi, I’m Lucy
         <span class="text-brand">Digital Marketing & CRO Lead | AI Automation & Performance Strategy Consultant</span>
       </h1>
       <p class="mt-4 text-slate-200 text-lg">
         I help brands and professionals grow smarter by combining data-led strategy, AI automation, and human creativity.
         With over a decade of experience across industries, I’ve driven measurable growth through SEO, CRO, UX, paid media, and analytics.
-        My focus is building scalable systems that improve visibility, enhance user experience, and automate performance, turning insight into sustainable growth.
-        I bring the precision of a strategist, the structure of a CRO expert, and the curiosity of someone shaping the future of marketing through AI.
+        My focus is building scalable systems that improve visibility, enhance user experience, and automate performance—turning insight into sustainable growth.
       </p>
+
+      <!-- CTAs -->
       <div class="mt-6 flex flex-wrap gap-4">
         <a href="about.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">More About Me</a>
         <a href="services.html" class="px-5 py-3 rounded border border-slate-600 hover:bg-slate-800 text-slate-100">See My Services</a>
       </div>
-    </div>
-    <div class="relative">
-      <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-700 shadow-soft">
-        <img src="Image 1.png" alt="Lucy working setup" class="w-full h-full object-cover" />
-      </div>
-      <div class="absolute -bottom-5 -left-5 bg-slate-900 border border-slate-700 rounded-2xl p-4 shadow-soft">
-        <p class="text-xl font-bold text-white">8–10x</p>
-        <p class="text-xs text-slate-400">ROAS improvement (best test)</p>
-      </div>
-      <div class="absolute -top-5 right-0 bg-slate-900 border border-slate-700 rounded-2xl p-4 shadow-soft">
-        <p class="text-xl font-bold text-white">1.2M+</p>
-        <p class="text-xs text-slate-400">Monthly search impressions</p>
+
+      <!-- Stat chips (replaces the 8–10x ROAS box) -->
+      <div class="mt-7 flex flex-wrap gap-3 text-sm">
+        <span class="px-4 py-2 rounded-full border border-slate-700 bg-slate-800/60">+63.42% clicks in 6 months — Diploma MSc</span>
+        <span class="px-4 py-2 rounded-full border border-slate-700 bg-slate-800/60">+94% clicks to listings — Togather</span>
+        <span class="px-4 py-2 rounded-full border border-slate-700 bg-slate-800/60">+64% conversion rate — Inecto CRO</span>
+        <!-- Optional alternate:
+        <span class="px-4 py-2 rounded-full border border-slate-700 bg-slate-800/60">€125k pipeline — Silverfin</span>
+        -->
       </div>
     </div>
+
+    <!-- Right: image -->
+    <figure class="relative">
+      <!-- Replace with a clean abstract/AI growth visual that suits your palette -->
+      <img src="assets/hero-growth-abstract.svg" alt="Data-driven growth & automation illustration" class="w-full h-auto rounded-2xl border border-slate-700 shadow-soft" />
+
+      <!-- Optional: keep or remove this badge -->
+      <figcaption class="absolute top-4 right-4 px-4 py-2 rounded-xl bg-slate-900/70 border border-slate-700 text-sm">
+        1.2M+ monthly search impressions
+      </figcaption>
+    </figure>
   </div>
 </section>
 
