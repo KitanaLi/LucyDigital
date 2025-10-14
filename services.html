@@ -172,6 +172,31 @@
     </div>
   </section>
 
+  <!-- Back to Top Button -->
+<button id="backToTop" 
+  class="hidden fixed bottom-8 right-8 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
+  ↑ Back to Top
+</button>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button when user scrolls down 400px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.remove("hidden");
+    } else {
+      backToTop.classList.add("hidden");
+    }
+  });
+
+  // Smooth scroll to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
 <!-- How to Work With Me -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-4">
