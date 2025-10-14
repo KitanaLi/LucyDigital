@@ -27,28 +27,19 @@
   </script>
 
   <style>
-    html, body { height: 100%; }
-    body {
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
-      color: #E2E8F0;
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif;
+    /* Keep this IDENTICAL to other pages for a consistent background */
+    body{
+      background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
+      color:#E2E8F0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif
     }
-    main { flex: 1; }
-
-    /* Match Resume heading colours */
-    h1,h2,h3,h4,h5,h6 { color:#F8FAFC }
-
+    h1,h2,h3,h4,h5,h6{color:#F8FAFC}
     a{color:#E2E8F0} a:hover{color:#7DD3FC}
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .subnav a{border:1px solid #334155}
     .subnav a.active{background:#0EA5E9;color:#0B1220;border-color:#0EA5E9}
     .subnav a:hover{background:#0B1220}
     @media (min-width: 768px){ .sticky-rail{ position: sticky; top: 96px; } }
-
-    /* REMOVE the larger body text override so it matches Resume */
-    /* p, li { font-size: 1.125rem !important; } */
 
     /* Accordion chevrons */
     details summary { list-style: none; cursor: pointer; }
@@ -58,17 +49,14 @@
     details[open] .chev{ transform: rotate(90deg); }
   </style>
 </head>
-<body id="top" class="antialiased">
+<body id="top" class="antialiased min-h-screen">
 
   <!-- Header (identical to Contact page) -->
   <header class="sticky top-0 z-50 border-b border-slate-700 backdrop-blur bg-slate-900/60">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Left: Brand Name -->
       <a href="index.html" class="text-slate-100 text-lg font-semibold tracking-wide hover:text-brand transition">
         Lucy Digital
       </a>
-
-      <!-- Right: Navigation -->
       <nav class="hidden md:flex gap-6 text-slate-200 font-medium items-center">
         <a href="work.html" class="hover:text-brand">Work</a>
         <a href="services.html" class="hover:text-brand">Services</a>
@@ -100,7 +88,6 @@
             <a href="services.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark">View Services</a>
           </div>
         </div>
-        <!-- Image larger and shifted left -->
         <figure class="w-full md:max-w-md justify-self-start aspect-square rounded-2xl overflow-hidden border border-slate-700">
           <img src="LucyDigital.png" alt="Lucy Digital" class="w-full h-full object-cover" loading="lazy" />
         </figure>
@@ -127,7 +114,6 @@
           <details id="core-expertise" class="card rounded-2xl p-0 overflow-hidden">
             <summary class="px-6 py-4">
               <div class="summary-row">
-                <!-- Match Resume: text-xl font-semibold -->
                 <h3 class="text-xl font-semibold">Core Expertise</h3>
                 <span class="chev">▸</span>
               </div>
@@ -218,30 +204,6 @@
             </div>
           </details>
 
-          <!-- Back to Top Button (inserted here, before closing CTA) -->
-          <button id="backToTop" 
-            class="hidden fixed bottom-8 right-8 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
-            ↑ Back to Top
-          </button>
-
-          <script>
-            const backToTop = document.getElementById("backToTop");
-
-            // Show button when user scrolls down 400px
-            window.addEventListener("scroll", () => {
-              if (window.scrollY > 400) {
-                backToTop.classList.remove("hidden");
-              } else {
-                backToTop.classList.add("hidden");
-              }
-            });
-
-            // Smooth scroll to top on click
-            backToTop.addEventListener("click", () => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-          </script>
-
           <!-- How to Work With Me -->
           <section class="py-12">
             <div class="max-w-6xl mx-auto px-4">
@@ -261,6 +223,12 @@
       </div>
     </section>
   </main>
+
+  <!-- Back to Top Button (now global and on top) -->
+  <button id="backToTop"
+    class="hidden fixed bottom-8 right-8 z-50 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
+    ↑ Back to Top
+  </button>
 
   <!-- Footer -->
   <footer class="py-6 border-t border-slate-700 text-center text-slate-400 text-sm">
@@ -300,6 +268,18 @@
           const id = '#' + d.id;
           subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
         }
+      });
+    });
+
+    // Back to Top: show after 300px, ensure always on top
+    document.addEventListener('DOMContentLoaded', () => {
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) backToTop.classList.remove('hidden');
+        else backToTop.classList.add('hidden');
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
   </script>
