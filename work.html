@@ -12,6 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-work.jpg" />
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { theme: { extend: {
@@ -19,18 +20,33 @@
       boxShadow:{ soft:'0 10px 30px rgba(0,0,0,0.1)'}
     } } }
   </script>
+
   <style>
-    body{background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);color:#E2E8F0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif}
+    /* Base */
+    body{
+      background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
+      color:#E2E8F0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',sans-serif
+    }
     h1,h2,h3,h4,h5,h6{color:#F8FAFC}
     a{color:#E2E8F0} a:hover{color:#7DD3FC}
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
-    .kicker{letter-spacing:.08em;text-transform:uppercase}
     .meta{font-size:.75rem}
-    /* Tabs */
-    .tabs button{border:1px solid #334155}
-    .tabs button[aria-selected="true"]{background:#0EA5E9;color:#0B1220;border-color:#0EA5E9}
-    .tabs button:hover{background:#0B1220}
-    @media (min-width: 768px){ .tabs-sticky{position:sticky;top:72px;z-index:40;backdrop-filter:blur(6px)} }
+
+    /* Sticky tabs helper (we set --stickyTop via JS) */
+    .tabs-sticky{ position: sticky; top: var(--stickyTop, 80px); z-index: 40; }
+
+    /* Keep headings from hiding under sticky header + tabs */
+    .section-group, .section-group h2 { scroll-margin-top: 140px; }
+
+    /* Tab button states */
+    .tab-btn[aria-selected="true"]{
+      background:#0EA5E9; color:#0B1220; border-color:#0EA5E9;
+    }
+    .tab-btn{
+      border:1px solid #334155;
+      background: #0B1220;
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -61,26 +77,22 @@
   </section>
 
   <!-- Sticky Tabs -->
-  <div class="tabs-sticky border-y border-slate-800 bg-slate-900/50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div role="tablist" aria-label="Case study categories" class="tabs flex flex-wrap gap-2 py-3">
-        <button role="tab" data-show="all" aria-selected="true" class="px-4 py-2 rounded-lg text-sm">All</button>
-        <button role="tab" data-show="seo" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">SEO</button>
-        <button role="tab" data-show="social" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">Social</button>
-        <button role="tab" data-show="cro" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">CRO</button>
-      </div>
+  <div class="tabs-sticky bg-slate-900/60 backdrop-blur border-y border-slate-700">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap gap-2">
+      <button class="tab-btn rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-800 transition" data-show="all" aria-selected="true">All</button>
+      <button class="tab-btn rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-800 transition" data-show="seo">SEO</button>
+      <button class="tab-btn rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-800 transition" data-show="social">Social</button>
+      <button class="tab-btn rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-800 transition" data-show="cro">CRO</button>
     </div>
   </div>
 
   <!-- SEO -->
-  <section class="py-6 section-group" data-group="seo">
+  <section class="py-10 section-group" data-group="seo">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="mb-6">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-brand">SEO</h2>
-        <h3 class="text-xl md:text-2xl font-bold mt-2">Search strategy and growth</h3>
-      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-brand">SEO</h2>
+      <h3 class="text-xl md:text-2xl font-bold mt-2">Search strategy and growth</h3>
 
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
         <!-- 1 Learna LTD -->
         <article class="card rounded-2xl p-6">
           <h3 class="text-xl font-semibold">Learna Ltd</h3>
@@ -332,14 +344,12 @@
   </section>
 
   <!-- Social -->
-  <section class="py-12 section-group" data-group="social">
+  <section class="py-10 section-group" data-group="social">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="mb-6">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-brand">Social</h2>
-        <h3 class="text-xl md:text-2xl font-bold mt-2">Paid and organic social</h3>
-      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-brand">Social</h2>
+      <h3 class="text-xl md:text-2xl font-bold mt-2">Paid and organic social</h3>
 
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
         <!-- Silverfin -->
         <article class="card rounded-2xl p-6">
           <h3 class="text-xl font-semibold">Silverfin</h3>
@@ -400,14 +410,12 @@
   </section>
 
   <!-- CRO -->
-  <section class="py-12 section-group" data-group="cro">
+  <section class="py-10 section-group" data-group="cro">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="mb-6">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-brand">CRO</h2>
-        <h3 class="text-xl md:text-2xl font-bold mt-2">Conversion rate optimisation</h3>
-      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-brand">CRO</h2>
+      <h3 class="text-xl md:text-2xl font-bold mt-2">Conversion rate optimisation</h3>
 
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
         <!-- Inecto CRO -->
         <article class="card rounded-2xl p-6">
           <h3 class="text-xl font-semibold">Inecto, CRO</h3>
@@ -477,7 +485,7 @@
   </section>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" 
+  <button id="backToTop"
     class="hidden fixed bottom-8 right-8 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
     ↑ Back to Top
   </button>
@@ -518,32 +526,58 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Compute sticky top for tabs = header height
+    const headerEl = document.querySelector('header');
+    const tabsEl = document.querySelector('.tabs-sticky');
+    function setStickyTop(){
+      const h = (headerEl?.offsetHeight || 72);
+      tabsEl?.style.setProperty('--stickyTop', (h) + 'px');
+    }
+    window.addEventListener('load', setStickyTop);
+    window.addEventListener('resize', setStickyTop);
+
     // Tabs logic
-    const tabs = document.querySelectorAll('[role="tab"]');
-    const sections = document.querySelectorAll('.section-group');
+    const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+    const sections = Array.from(document.querySelectorAll('.section-group'));
 
     function setActiveTab(target){
       const show = target.dataset.show;
       tabs.forEach(t => t.setAttribute('aria-selected', t === target ? 'true' : 'false'));
-      if(show === 'all'){
+
+      if (show === 'all') {
         sections.forEach(s => s.classList.remove('hidden'));
       } else {
         sections.forEach(s => s.classList.toggle('hidden', s.dataset.group !== show));
-        // Scroll to top of visible content after switching
-        const y = document.querySelector('.tabs-sticky').getBoundingClientRect().top + window.scrollY - 8;
+      }
+
+      // Offset-aware scroll to the top of the first visible section
+      const headerH = headerEl?.offsetHeight || 0;
+      const tabsH = tabsEl?.offsetHeight || 0;
+      const offset = headerH + tabsH + 8;
+
+      const firstVisible = show === 'all'
+        ? sections[0]
+        : document.querySelector(`.section-group[data-group="${show}"]`);
+
+      if (firstVisible) {
+        const y = firstVisible.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
-      // Update hash for shareability
+
+      // Update URL hash (shareable)
       if (show === 'all') history.replaceState(null, '', location.pathname);
       else history.replaceState(null, '', `#${show}`);
     }
 
-    tabs.forEach(tab => tab.addEventListener('click', () => setActiveTab(tab)));
+    tabs.forEach(btn => btn.addEventListener('click', () => setActiveTab(btn)));
 
-    // On load: respect hash (#seo/#social/#cro)
-    const hash = (location.hash || '').replace('#','');
-    const initial = Array.from(tabs).find(t => t.dataset.show === hash) || Array.from(tabs).find(t => t.dataset.show === 'all');
-    setActiveTab(initial);
+    // Load state from hash (#seo/#social/#cro)
+    function initFromHash(){
+      const hash = location.hash.replace('#','');
+      const initial = tabs.find(t => t.dataset.show === hash) || tabs[0];
+      setActiveTab(initial);
+    }
+    window.addEventListener('load', initFromHash);
 
     // Back to Top
     const backToTop = document.getElementById("backToTop");
@@ -551,7 +585,9 @@
       if (window.scrollY > 400) backToTop.classList.remove("hidden");
       else backToTop.classList.add("hidden");
     });
-    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
 </body>
 </html>
