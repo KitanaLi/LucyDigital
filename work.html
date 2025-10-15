@@ -26,6 +26,11 @@
     .card{background-color:#1E293B;border:1px solid #334155;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .kicker{letter-spacing:.08em;text-transform:uppercase}
     .meta{font-size:.75rem}
+    /* Tabs */
+    .tabs button{border:1px solid #334155}
+    .tabs button[aria-selected="true"]{background:#0EA5E9;color:#0B1220;border-color:#0EA5E9}
+    .tabs button:hover{background:#0B1220}
+    @media (min-width: 768px){ .tabs-sticky{position:sticky;top:72px;z-index:40;backdrop-filter:blur(6px)} }
   </style>
 </head>
 <body class="antialiased">
@@ -55,8 +60,20 @@
     </div>
   </section>
 
+  <!-- Sticky Tabs -->
+  <div class="tabs-sticky border-y border-slate-800 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div role="tablist" aria-label="Case study categories" class="tabs flex flex-wrap gap-2 py-3">
+        <button role="tab" data-show="all" aria-selected="true" class="px-4 py-2 rounded-lg text-sm">All</button>
+        <button role="tab" data-show="seo" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">SEO</button>
+        <button role="tab" data-show="social" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">Social</button>
+        <button role="tab" data-show="cro" aria-selected="false" class="px-4 py-2 rounded-lg text-sm">CRO</button>
+      </div>
+    </div>
+  </div>
+
   <!-- SEO -->
-  <section class="py-6">
+  <section class="py-6 section-group" data-group="seo">
     <div class="max-w-6xl mx-auto px-4">
       <div class="mb-6">
         <h2 class="text-4xl md:text-5xl font-extrabold text-brand">SEO</h2>
@@ -298,7 +315,7 @@
           </div>
         </article>
 
-                <!-- Renew -->
+        <!-- Renew -->
         <article class="card rounded-2xl p-6">
           <h3 class="text-xl font-semibold">Renew</h3>
           <p class="meta text-slate-400">Industry: Consumer</p>
@@ -315,7 +332,7 @@
   </section>
 
   <!-- Social -->
-  <section class="py-12">
+  <section class="py-12 section-group" data-group="social">
     <div class="max-w-6xl mx-auto px-4">
       <div class="mb-6">
         <h2 class="text-4xl md:text-5xl font-extrabold text-brand">Social</h2>
@@ -349,23 +366,22 @@
           </div>
         </article>
 
-<!-- Bloom -->
-<article class="card rounded-2xl p-6">
-  <h3 class="text-xl font-semibold">Bloom Health</h3>
-  <p class="meta text-slate-400">Industry: Health Insurance, Fintech</p>
-  <div class="mt-3 space-y-3 text-sm text-slate-300">
-    <p><strong>Challenge:</strong> Establish brand trust and drive qualified quote requests in a competitive, regulated South African market with limited digital visibility for new entrants.</p>
-    <p><strong>Strategy and Execution:</strong> Integrated social, paid search, and on page optimisation with CRM tracking. Education led messaging on affordability and gap cover benefits, segmented targeting, high engagement creatives, retargeting, and automated lead routing for timely follow ups.</p>
-    <p><strong>Results:</strong>
-      <span class="text-brand">Bronze Assegai Award (Social Media Platforms)</span>,
-      <span class="text-brand">Leader recognition (Search Marketing: SEO and PPC)</span>.
-      Achieved measurable uplift in qualified traffic, engagement, and quote conversions with cost per lead efficiency outperforming typical industry norms.
-    </p>
-    <p><strong>Learning:</strong> Strategic storytelling with data driven optimisation builds brand credibility and conversion performance.</p>
-    <p class="text-xs text-slate-400">Context: New entrant in a compliance heavy health insurance category with budget discipline.</p>
-  </div>
-</article>
-
+        <!-- Bloom -->
+        <article class="card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Bloom Health</h3>
+          <p class="meta text-slate-400">Industry: Health Insurance, Fintech</p>
+          <div class="mt-3 space-y-3 text-sm text-slate-300">
+            <p><strong>Challenge:</strong> Establish brand trust and drive qualified quote requests in a competitive, regulated South African market with limited digital visibility for new entrants.</p>
+            <p><strong>Strategy and Execution:</strong> Integrated social, paid search, and on page optimisation with CRM tracking. Education led messaging on affordability and gap cover benefits, segmented targeting, high engagement creatives, retargeting, and automated lead routing for timely follow ups.</p>
+            <p><strong>Results:</strong>
+              <span class="text-brand">Bronze Assegai Award (Social Media Platforms)</span>,
+              <span class="text-brand">Leader recognition (Search Marketing: SEO and PPC)</span>.
+              Achieved measurable uplift in qualified traffic, engagement, and quote conversions with cost per lead efficiency outperforming typical industry norms.
+            </p>
+            <p><strong>Learning:</strong> Strategic storytelling with data driven optimisation builds brand credibility and conversion performance.</p>
+            <p class="text-xs text-slate-400">Context: New entrant in a compliance heavy health insurance category with budget discipline.</p>
+          </div>
+        </article>
 
         <!-- Inecto social -->
         <article class="card rounded-2xl p-6">
@@ -379,12 +395,12 @@
             <p class="text-xs text-slate-400">Context: Always on social with seasonal campaign peaks.</p>
           </div>
         </article>
-
+      </div>
     </div>
   </section>
 
   <!-- CRO -->
-  <section class="py-12">
+  <section class="py-12 section-group" data-group="cro">
     <div class="max-w-6xl mx-auto px-4">
       <div class="mb-6">
         <h2 class="text-4xl md:text-5xl font-extrabold text-brand">CRO</h2>
@@ -461,63 +477,81 @@
   </section>
 
   <!-- Back to Top Button -->
-<button id="backToTop" 
-  class="hidden fixed bottom-8 right-8 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
-  ↑ Back to Top
-</button>
+  <button id="backToTop" 
+    class="hidden fixed bottom-8 right-8 bg-brand text-slate-900 font-semibold px-4 py-3 rounded-full shadow-soft hover:bg-brand-dark transition duration-300">
+    ↑ Back to Top
+  </button>
 
-<script>
-  const backToTop = document.getElementById("backToTop");
-
-  // Show button when user scrolls down 400px
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      backToTop.classList.remove("hidden");
-    } else {
-      backToTop.classList.add("hidden");
-    }
-  });
-
-  // Smooth scroll to top on click
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
-
-<!-- Closing Section -->
-<section class="py-12">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <div class="card rounded-2xl p-8 bg-slate-800 border border-slate-700 shadow-soft">
-      <p class="text-slate-300 text-base md:text-lg leading-relaxed">
-        Each project reflects a <span class="text-brand font-semibold">data-led approach</span>, balancing creativity, analytics, and execution.
-        Where constraints existed, they informed better frameworks and sharper hypotheses for the next round.
-      </p>
-    </div>
-  </div>
-</section>
-
-  
-<!-- How to Work With Me -->
-<section class="py-12">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="card rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <div>
-        <h5 class="text-lg font-semibold text-[#0EA5E9]">How to Work With Me</h5>
-        <p class="text-slate-400 mt-1 text-sm">Partnering with brands and professionals across the globe.</p>
+  <!-- Closing Section -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="card rounded-2xl p-8 bg-slate-800 border border-slate-700 shadow-soft">
+        <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+          Each project reflects a <span class="text-brand font-semibold">data-led approach</span>, balancing creativity, analytics, and execution.
+          Where constraints existed, they informed better frameworks and sharper hypotheses for the next round.
+        </p>
       </div>
-      <a href="contact.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark transition">
-        Get in touch
-      </a>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- How to Work With Me -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="card rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h5 class="text-lg font-semibold text-[#0EA5E9]">How to Work With Me</h5>
+          <p class="text-slate-400 mt-1 text-sm">Partnering with brands and professionals across the globe.</p>
+        </div>
+        <a href="contact.html" class="px-5 py-3 rounded bg-brand text-slate-900 font-medium hover:bg-brand-dark transition">
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="py-6 border-t border-slate-700 text-center text-slate-400 text-sm">
     © <span id="year"></span> Lucy Digital. All rights reserved.
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Tabs logic
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const sections = document.querySelectorAll('.section-group');
+
+    function setActiveTab(target){
+      const show = target.dataset.show;
+      tabs.forEach(t => t.setAttribute('aria-selected', t === target ? 'true' : 'false'));
+      if(show === 'all'){
+        sections.forEach(s => s.classList.remove('hidden'));
+      } else {
+        sections.forEach(s => s.classList.toggle('hidden', s.dataset.group !== show));
+        // Scroll to top of visible content after switching
+        const y = document.querySelector('.tabs-sticky').getBoundingClientRect().top + window.scrollY - 8;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      // Update hash for shareability
+      if (show === 'all') history.replaceState(null, '', location.pathname);
+      else history.replaceState(null, '', `#${show}`);
+    }
+
+    tabs.forEach(tab => tab.addEventListener('click', () => setActiveTab(tab)));
+
+    // On load: respect hash (#seo/#social/#cro)
+    const hash = (location.hash || '').replace('#','');
+    const initial = Array.from(tabs).find(t => t.dataset.show === hash) || Array.from(tabs).find(t => t.dataset.show === 'all');
+    setActiveTab(initial);
+
+    // Back to Top
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) backToTop.classList.remove("hidden");
+      else backToTop.classList.add("hidden");
+    });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
 </body>
 </html>
